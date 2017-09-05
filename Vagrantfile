@@ -13,7 +13,8 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
 
-  config.vm.box = "ubuntu/trusty64"
+  # config.vm.box = "ubuntu/trusty64"
+  config.vm.box = "training.box"
   # config.vm.box = "fdc_training.box"
   # config.vm.box_url = "ubuntu/trusty64"
 
@@ -53,7 +54,7 @@ Vagrant.configure("2") do |config|
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
   config.vm.synced_folder "./workspace", "/var/www", create: true, owner: "www-data", group: "www-data", mount_options: ["dmode=775,fmode=664"]
-  config.vm.synced_folder "./apache2", "/etc/apache2", create: true, owner: "www-data", group: "www-data", mount_options: ["dmode=775,fmode=664"]
+  config.vm.synced_folder "./apache2/sites-enabled", "/etc/apache2/sites-enabled", create: true, owner: "www-data", group: "www-data", mount_options: ["dmode=775,fmode=664"]
 
   # nc
   config.vm.define "training" do |training|
