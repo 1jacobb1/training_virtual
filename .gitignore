@@ -3,3 +3,4 @@ ssl/*
 training_base/*
 kurento2/*
 training.box
+.vagrant/*
