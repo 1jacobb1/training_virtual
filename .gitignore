@@ -1,4 +1,4 @@
-workspace/
+workspace/*
 ssl/*
 training_base/*
 kurento2/*
