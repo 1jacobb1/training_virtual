@@ -54,8 +54,8 @@ Vagrant.configure("2") do |config|
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
   config.vm.synced_folder "./workspace", "/var/www", create: true, owner: "www-data", group: "www-data", mount_options: ["dmode=775,fmode=664"]
-  config.vm.synced_folder "./apache2/sites-enabled", "/etc/apache2/sites-enabled", create: true, owner: "www-data", group: "www-data", mount_options: ["dmode=775,fmode=664"]
-
+  config.vm.synced_folder "./apache2/sites-available", "/etc/apache2/sites-available", create: true, owner: "www-data", group: "www-data", mount_options: ["dmode=775,fmode=664"]
+  
   # nc
   config.vm.define "training" do |training|
     # run php unit setup
